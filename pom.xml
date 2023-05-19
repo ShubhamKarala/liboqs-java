@@ -6,7 +6,7 @@
     <groupId>org.openquantumsafe</groupId>
     <artifactId>liboqs-java</artifactId>
     <packaging>jar</packaging>
-    <version>1.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>liboqs-java: Java wrapper for liboqs</name>
     <description>liboqs-java offers a Java wrapper providing quantum-resistant cryptographic algorithms via liboqs.</description>
 
@@ -185,6 +185,26 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub ShubhamKarala Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/ShubhamKarala/liboqs-java</url>
+        </repository>
+    </distributionManagement>
 </project>
